@@ -1,0 +1,23 @@
+# Angular cache
+.angular/
+
+# Node modules
+node_modules/
+
+# Build outputs
+dist/
+out-tsc/
+
+# Environment files
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db

@@ -1,0 +1,15 @@
+<div class='explore-menu' id='explore-menu'>
+  <h1>Explore our menu</h1>
+  <p class='explore-menu-text'>Choose from a diverse menu featuring a delectable array of gifts crafted with the finest quality and care. Our mission is to satisfy your gifting needs and elevate your celebration experience, one special gift at a time.</p>
+  <div class="explore-menu-list">
+    <div *ngFor="let item of menuList" 
+         (click)="setCategory(item.menu_name)" 
+         class="explore-menu-list-item">
+      <img [class.active]="category === item.menu_name" 
+           [src]="item.menu_image" 
+           alt="" />
+      <p>{{item.menu_name}}</p>
+    </div>
+  </div>
+  <hr />
+</div>

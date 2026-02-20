@@ -1,0 +1,26 @@
+<div class="gift-item">
+  <div class="gift-item-img-container">
+    <img class="gift-item-image" [src]="url + '/images/' + gift.image" alt="" />
+    
+    <img *ngIf="getItemCount() === 0" 
+         class="add" 
+         (click)="addToCart()" 
+         src="assets/add_icon_white.png" 
+         alt="" />
+    
+    <div *ngIf="getItemCount() > 0" class="gift-item-counter">
+      <img (click)="removeFromCart()" src="assets/remove_icon_red.png" alt="" />
+      <p class="para">{{getItemCount()}}</p>
+      <img (click)="addToCart()" src="assets/add_icon_green.png" alt="" />
+    </div>
+  </div>
+
+  <div class="gift-item-info">
+    <div class="gift-item-name-rating">
+      <p class="naam">{{gift.name}}</p>
+      <img src="assets/rating_starts.png" alt="" />
+    </div>
+    <p class="gift-item-desc">{{gift.description}}</p>
+    <p class="gift-item-price">Rs.{{gift.price}}</p>
+  </div>
+</div>

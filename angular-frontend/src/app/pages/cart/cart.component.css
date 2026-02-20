@@ -1,0 +1,125 @@
+.cart {
+  margin-top: 100px;
+  padding: 20px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.white {
+  color: white;
+}
+.cart-items {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+}
+.cart-items-title {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr 1fr 1fr 0.5fr;
+  align-items: center;
+  color: #ddd;
+  font-size: max(1vw, 12px);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.cart-items-item {
+  margin: 10px 0px;
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr 1fr 1fr 0.5fr;
+  align-items: center;
+  padding: 15px 0;
+  transition: all 0.3s ease;
+}
+.cart-items-item:hover {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 10px;
+  padding-left: 10px;
+}
+.cart-items-item img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  border-radius: 8px;
+  background: white;
+  padding: 5px;
+}
+.cart hr {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  border: none;
+  margin: 10px 0;
+}
+.cart-items-item .cross {
+  cursor: pointer;
+  font-size: 20px;
+  transition: transform 0.2s ease;
+}
+.cart-items-item .cross:hover {
+  transform: scale(1.2);
+}
+.cart-bottom {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  gap: max(12vw, 20px);
+}
+.cart-total {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  max-width: 500px;
+  margin-left: auto;
+}
+.cart-total h2 {
+  color: white;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.cart-total-detail {
+  display: flex;
+  justify-content: space-between;
+  color: #ddd;
+  font-size: 16px;
+  padding: 5px 0;
+}
+.cart-total-detail b {
+  font-size: 18px;
+  color: white;
+}
+.cart-total hr {
+  margin: 10px 0;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+}
+.cart-total button {
+  border: none;
+  color: white;
+  background: linear-gradient(135deg, #ff6b6b, #ee5a6f);
+  width: 100%;
+  padding: 15px 0px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+}
+.cart-total button:hover {
+  background: linear-gradient(135deg, #ee5a6f, #ff6b6b);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
+}
+.cart-total button:active {
+  transform: translateY(0);
+}

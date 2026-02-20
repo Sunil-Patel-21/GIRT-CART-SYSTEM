@@ -1,0 +1,55 @@
+<div class="navbar">
+  <a routerLink="/">
+    <img src="assets/logoo.png" alt="" class="logo" />
+  </a>
+
+  <ul class="navbar-menu">
+    <a routerLink="/" (click)="setMenu('home')" [class.active]="menu === 'home'">
+      Home
+    </a>
+    <a href="#explore-menu" (click)="setMenu('menu')" [class.active]="menu === 'menu'">
+      Menu
+    </a>
+    <a href="#footer" (click)="setMenu('contact-us')" [class.active]="menu === 'contact-us'">
+      Contact Us
+    </a>
+  </ul>
+
+  <div class="navbar-right">
+    <div class="navbar-search">
+      <img src="assets/search_icon.png" alt="" />
+      <input 
+        type="text" 
+        [(ngModel)]="searchQuery" 
+        (input)="onSearch()" 
+        (keyup.enter)="onSearchEnter()"
+        placeholder="Search gifts..." 
+        class="search-input" 
+      />
+    </div>
+
+    <div class="navbar-search_icon">
+      <a routerLink="/cart">
+        <img src="assets/basket_icon.png" alt="" />
+      </a>
+      <div [class.dot]="totalAmount !== 0"></div>
+    </div>
+
+    <button *ngIf="!token" (click)="openLogin()" type="button">Sign in</button>
+    
+    <div *ngIf="token" class="navbar-profile">
+      <img src="assets/profile_icon.png" alt="" />
+      <ul class="nav-profile-dropdown">
+        <li (click)="goToOrders()">
+          <img src="assets/bag_icon.png" alt="" />
+          <p>Orders</p>
+        </li>
+        <hr />
+        <li (click)="logout()">
+          <img src="assets/logout_icon.png" alt="" />
+          <p>Log out</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

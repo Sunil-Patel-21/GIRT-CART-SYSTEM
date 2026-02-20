@@ -1,0 +1,43 @@
+<div class="login-popup">
+  <form (ngSubmit)="onLogin($event)" class="login-popup-container" #loginForm="ngForm">
+    <div class="login-popup-title">
+      <h2 class="but">{{currState}}</h2>
+      <img (click)="close()" src="assets/cross_icon.png" alt="" />
+    </div>
+
+    <div class="login-popup-inputs">
+      <input *ngIf="currState === 'Sign Up'" 
+             [(ngModel)]="data.name" 
+             name="name"
+             type="text" 
+             placeholder="Your name" 
+             required />
+
+      <input [(ngModel)]="data.email" 
+             name="email"
+             type="email" 
+             placeholder="Your email" 
+             required />
+      
+      <input [(ngModel)]="data.password" 
+             name="password"
+             type="password" 
+             placeholder="Password" 
+             required />
+    </div>
+    
+    <button type="submit" [disabled]="!loginForm.valid">
+      {{currState === 'Sign Up' ? 'Create Account' : 'Login'}}
+    </button>
+
+    <p class="but" *ngIf="currState === 'Login'">
+      Create a new account?
+      <span (click)="toggleState()">Click here</span>
+    </p>
+    
+    <p class="but" *ngIf="currState === 'Sign Up'">
+      Already a user?
+      <span (click)="toggleState()">Click here</span>
+    </p>
+  </form>
+</div>

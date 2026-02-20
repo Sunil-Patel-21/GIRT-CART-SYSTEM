@@ -1,0 +1,10 @@
+<div class="gift-display" id="gift-display">
+  <h2>Top gifts near you</h2>
+  <div class="gift-display-list">
+    <app-gift-item 
+      *ngFor="let item of giftList" 
+      [gift]="item"
+      [ngClass]="{'hidden': !shouldDisplay(item)}">
+    </app-gift-item>
+  </div>
+</div>

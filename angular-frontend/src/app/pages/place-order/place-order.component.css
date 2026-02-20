@@ -1,0 +1,134 @@
+.place-order {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  margin: 80px auto;
+  max-width: 1200px;
+  padding: 0 20px;
+}
+
+.white {
+  color: white;
+}
+
+.place-order-left {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 40px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.place-order-left .title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: white;
+}
+
+.place-order-left input {
+  margin-bottom: 20px;
+  width: 100%;
+  padding: 14px 18px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.place-order-left input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.place-order-left input:focus {
+  outline: none;
+  border-color: tomato;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.place-order-left .multi-fields {
+  display: flex;
+  gap: 15px;
+}
+
+.place-order-right {
+  flex: 0 0 420px;
+}
+
+.cart-total {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 35px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  position: sticky;
+  top: 100px;
+}
+
+.cart-total h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.cart-total-detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  font-size: 16px;
+}
+
+.cart-total hr {
+  border: none;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+  margin: 8px 0;
+}
+
+.cart-total button {
+  width: 100%;
+  padding: 16px;
+  margin-top: 25px;
+  background: tomato;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cart-total button:hover {
+  background: #ff4500;
+  transform: translateY(-2px);
+}
+
+.cart-total button:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .place-order {
+    flex-direction: column;
+    margin: 40px auto;
+  }
+  
+  .place-order-left,
+  .place-order-right {
+    flex: 1;
+    width: 100%;
+  }
+  
+  .place-order-left {
+    padding: 30px 25px;
+  }
+  
+  .cart-total {
+    position: static;
+  }
+}

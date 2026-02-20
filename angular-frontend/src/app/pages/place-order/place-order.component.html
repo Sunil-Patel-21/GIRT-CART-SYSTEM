@@ -1,0 +1,46 @@
+<div class="place-order">
+  <div class="place-order-left">
+    <p class="title">Delivery Information</p>
+    <form (ngSubmit)="placeOrder($event)">
+      <div class="multi-fields">
+        <input type="text" [(ngModel)]="data.firstName" name="firstName" placeholder="First name" required />
+        <input type="text" [(ngModel)]="data.lastName" name="lastName" placeholder="Last name" required />
+      </div>
+      <input type="email" [(ngModel)]="data.email" name="email" placeholder="Email address" required />
+      <input type="text" [(ngModel)]="data.street" name="street" placeholder="Street" required />
+      <div class="multi-fields">
+        <input type="text" [(ngModel)]="data.city" name="city" placeholder="City" required />
+        <input type="text" [(ngModel)]="data.state" name="state" placeholder="State" required />
+      </div>
+      <div class="multi-fields">
+        <input type="text" [(ngModel)]="data.zipcode" name="zipcode" placeholder="Zip code" required />
+        <input type="text" [(ngModel)]="data.country" name="country" placeholder="Country" required />
+      </div>
+      <input type="text" [(ngModel)]="data.phone" name="phone" placeholder="Phone" required />
+    </form>
+  </div>
+
+  <div class="place-order-right">
+    <div class="cart-total">
+      <h2 class="white">Cart Total</h2>
+      <div>
+        <div class="cart-total-detail">
+          <p class="white">Subtotal</p>
+          <p class="white">Rs.{{getTotalCartAmount()}}</p>
+        </div>
+        <hr />
+        <div class="cart-total-detail">
+          <p class="white">Delivery Fee</p>
+          <p class="white">Rs.{{getTotalCartAmount() === 0 ? 0 : 40}}</p>
+        </div>
+        <hr />
+        <div class="cart-total-detail">
+          <b class="white">Total</b>
+          <b class="white">Rs.{{getTotalCartAmount() === 0 ? 0 : getTotalCartAmount() + 40}}</b>
+        </div>
+        <hr />
+      </div>
+      <button (click)="placeOrder($event)">PLACE ORDER</button>
+    </div>
+  </div>
+</div>
