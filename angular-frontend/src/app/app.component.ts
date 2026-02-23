@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { StoreService } from './services/store.service';
 
 @Component({
   selector: 'app-root',
@@ -14,6 +15,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   showLogin = false;
+
+  constructor(private storeService: StoreService) {
+    this.storeService.showLogin$.subscribe(show => {
+      if (show) {
+        this.showLogin = true;
+      }
+    });
+  }
 
   onShowLogin(show: boolean) {
     console.log('Show login popup:', show);

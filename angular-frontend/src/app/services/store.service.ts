@@ -12,11 +12,13 @@ export class StoreService {
   private tokenSubject = new BehaviorSubject<string>('');
   private giftListSubject = new BehaviorSubject<Gift[]>([]);
   private searchQuerySubject = new BehaviorSubject<string>('');
+  private showLoginSubject = new BehaviorSubject<boolean>(false);
 
   cartItems$ = this.cartItemsSubject.asObservable();
   token$ = this.tokenSubject.asObservable();
   giftList$ = this.giftListSubject.asObservable();
   searchQuery$ = this.searchQuerySubject.asObservable();
+  showLogin$ = this.showLoginSubject.asObservable();
 
   constructor(private http: HttpClient) {
     this.loadData();
@@ -37,6 +39,11 @@ export class StoreService {
   }
 
   addToCart(itemId: string) {
+    const token = localStorage.getItem('token');
+    if (!token) {
+      this.showLoginSubject.next(true);
+      return;
+    }
     const currentCart = this.cartItemsSubject.value;
     if (!currentCart[itemId]) {
       currentCart[itemId] = 1;
