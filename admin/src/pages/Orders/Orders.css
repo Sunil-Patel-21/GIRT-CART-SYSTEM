@@ -1,0 +1,97 @@
+.orders {
+  width: 85%;
+  margin: 30px auto;
+}
+
+.orders h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.orders-list {
+  display: grid;
+  gap: 20px;
+}
+
+.order-card {
+  background: rgba(255,255,255,0.95);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.order-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px rgba(102, 126, 234, 0.3);
+}
+
+.order-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #f0f0f0;
+  color: #667eea;
+}
+
+.order-id {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.order-date {
+  font-size: 14px;
+  color: #666;
+}
+
+.order-items {
+  margin-bottom: 15px;
+  padding: 10px;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.order-items p {
+  color: #333;
+  margin: 5px 0;
+}
+
+.order-details {
+  margin-bottom: 15px;
+}
+
+.order-details p {
+  color: #333;
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+.order-status {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.status-select {
+  padding: 10px 20px;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.status-select:hover {
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+@media (max-width: 768px) {
+  .orders {
+    width: 95%;
+  }
+}
