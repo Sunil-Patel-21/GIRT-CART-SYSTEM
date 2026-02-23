@@ -1,0 +1,164 @@
+.gift-detail-popup {
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gift-detail-container {
+  background-color: #1a1a1a;
+  border-radius: 15px;
+  max-width: 800px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  animation: slideIn 0.3s;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.gift-detail-close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.gift-detail-content {
+  display: flex;
+  gap: 30px;
+  padding: 40px;
+}
+
+.gift-detail-image {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.gift-detail-info {
+  flex: 1;
+  color: white;
+}
+
+.gift-detail-info h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.category {
+  color: #888;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.description {
+  color: #ccc;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.price {
+  color: tomato;
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.quantity-selector {
+  margin-bottom: 20px;
+}
+
+.quantity-selector label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.quantity-controls button {
+  width: 40px;
+  height: 40px;
+  background-color: tomato;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.quantity-controls button:hover:not(:disabled) {
+  background-color: #ff4500;
+}
+
+.quantity-controls button:disabled {
+  background-color: #666;
+  cursor: not-allowed;
+}
+
+.quantity-controls input {
+  width: 60px;
+  height: 40px;
+  text-align: center;
+  font-size: 16px;
+  border: 2px solid #444;
+  border-radius: 5px;
+  background-color: #2a2a2a;
+  color: white;
+}
+
+.add-to-cart-btn {
+  background-color: tomato;
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 100%;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #ff4500;
+}
+
+@media (max-width: 768px) {
+  .gift-detail-content {
+    flex-direction: column;
+    padding: 20px;
+  }
+  
+  .gift-detail-image {
+    width: 100%;
+    height: auto;
+  }
+}

@@ -50,6 +50,28 @@
   margin: 10px 0px;
 }
 
+.price-view-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.view-more-btn {
+  background-color: tomato;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.view-more-btn:hover {
+  background-color: #ff4500;
+}
+
 .gift-item-img-container {
   position: relative;
   height: 200px;

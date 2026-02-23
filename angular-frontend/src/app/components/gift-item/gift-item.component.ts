@@ -11,12 +11,29 @@ export class GiftItemComponent {
   @Input() gift!: Gift;
   cartItems: any = {};
   url = '';
+  showDetail = false;
 
   constructor(private storeService: StoreService) {
     this.url = this.storeService.getUrl();
     this.storeService.cartItems$.subscribe(items => {
       this.cartItems = items;
     });
+  }
+
+  getTruncatedDescription(): string {
+    const words = this.gift.description.split(' ');
+    if (words.length > 30) {
+      return words.slice(0, 30).join(' ') + '...';
+    }
+    return this.gift.description;
+  }
+
+  openDetail() {
+    this.showDetail = true;
+  }
+
+  closeDetail() {
+    this.showDetail = false;
   }
 
   addToCart() {

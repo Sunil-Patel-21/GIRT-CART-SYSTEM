@@ -1,0 +1,23 @@
+<div class="gift-detail-popup">
+  <div class="gift-detail-container">
+    <div class="gift-detail-close" (click)="close()">✕</div>
+    <div class="gift-detail-content">
+      <img [src]="url + '/images/' + gift.image" alt="" class="gift-detail-image" />
+      <div class="gift-detail-info">
+        <h2>{{gift.name}}</h2>
+        <p class="category">Category: {{gift.category}}</p>
+        <p class="description">{{gift.description}}</p>
+        <p class="price">Rs.{{gift.price}}</p>
+        <div class="quantity-selector">
+          <label>Quantity:</label>
+          <div class="quantity-controls">
+            <button (click)="decreaseQuantity()" [disabled]="quantity <= 1">-</button>
+            <input type="number" [(ngModel)]="quantity" min="1" />
+            <button (click)="increaseQuantity()">+</button>
+          </div>
+        </div>
+        <button (click)="addToCartWithQuantity()" class="add-to-cart-btn">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+</div>

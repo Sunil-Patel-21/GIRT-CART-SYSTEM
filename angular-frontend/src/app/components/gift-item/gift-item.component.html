@@ -1,6 +1,10 @@
 <div class="gift-item">
   <div class="gift-item-img-container">
-    <img class="gift-item-image" [src]="url + '/images/' + gift.image" alt="" />
+    <img class="gift-item-image" 
+         [src]="url + '/images/' + gift.image" 
+         alt="" 
+         (click)="openDetail()" 
+         style="cursor: pointer;" />
     
     <img *ngIf="getItemCount() === 0" 
          class="add" 
@@ -20,7 +24,12 @@
       <p class="naam">{{gift.name}}</p>
       <img src="assets/rating_starts.png" alt="" />
     </div>
-    <p class="gift-item-desc">{{gift.description}}</p>
-    <p class="gift-item-price">Rs.{{gift.price}}</p>
+    <p class="gift-item-desc">{{gift.description.split(' ').slice(0, 30).join(' ')}}{{gift.description.split(' ').length > 20 ? '...' : ''}}</p>
+    <div class="price-view-container">
+      <p class="gift-item-price">Rs.{{gift.price}}</p>
+      <button class="view-more-btn" (click)="openDetail()">Quick View</button>
+    </div>
   </div>
 </div>
+
+<app-gift-detail *ngIf="showDetail" [gift]="gift" (closeEvent)="closeDetail()"></app-gift-detail>

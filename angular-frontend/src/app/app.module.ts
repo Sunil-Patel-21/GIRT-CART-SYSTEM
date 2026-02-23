@@ -12,6 +12,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { ExploreMenuComponent } from './components/explore-menu/explore-menu.component';
 import { GiftDisplayComponent } from './components/gift-display/gift-display.component';
 import { GiftItemComponent } from './components/gift-item/gift-item.component';
+import { GiftDetailComponent } from './components/gift-detail/gift-detail.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { LoginPopupComponent } from './components/login-popup/login-popup.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -29,6 +30,7 @@ import { routes } from './app.routes';
     ExploreMenuComponent,
     GiftDisplayComponent,
     GiftItemComponent,
+    GiftDetailComponent,
     FooterComponent,
     LoginPopupComponent,
     HomeComponent,
