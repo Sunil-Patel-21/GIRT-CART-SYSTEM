@@ -69,4 +69,24 @@ const registerUser = async (req, res) => {
     }
 }
 
-export { loginUser, registerUser };
+const listUsers = async (req, res) => {
+    try {
+        const users = await userModel.find({}).select('-password');
+        res.json({ success: true, data: users });
+    } catch (error) {
+        console.log(error);
+        res.json({ success: false, message: "Error" });
+    }
+};
+
+const deleteUser = async (req, res) => {
+    try {
+        await userModel.findByIdAndDelete(req.body.id);
+        res.json({ success: true, message: "User Deleted" });
+    } catch (error) {
+        console.log(error);
+        res.json({ success: false, message: "Error" });
+    }
+};
+
+export { loginUser, registerUser, listUsers, deleteUser };

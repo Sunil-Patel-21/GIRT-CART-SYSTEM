@@ -2,6 +2,8 @@ import React from "react";
 import "./Sidebar.css";
 import { assets } from "../../assets/assets";
 import { NavLink } from "react-router-dom";
+import { FaUsers } from "react-icons/fa";
+
 const Sidebar = () => {
   return (
     <div className="sidebar">
@@ -13,6 +15,10 @@ const Sidebar = () => {
         <NavLink to="/list" className="sidebar-option">
           <img src={assets.order_icon} alt="" />
           <p>List Items</p>
+        </NavLink>
+        <NavLink to="/users" className="sidebar-option">
+          <FaUsers size={30} style={{ color: "#3F3F3F" }} />
+          <p>Users</p>
         </NavLink>
       </div>
     </div>
