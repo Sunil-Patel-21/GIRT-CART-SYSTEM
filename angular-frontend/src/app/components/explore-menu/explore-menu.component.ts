@@ -12,13 +12,13 @@ export class ExploreMenuComponent {
 
   menuList: MenuCategory[] = [
     { menu_name: 'Flowers', menu_image: 'assets/menu_1.png' },
-    { menu_name: 'Cakes', menu_image: 'assets/menu_2.png' },
     { menu_name: 'Chocolates', menu_image: 'assets/menu_3.png' },
-    { menu_name: 'Soft Toys', menu_image: 'assets/menu_4.png' },
-    { menu_name: 'Personalized Gifts', menu_image: 'assets/menu_5.png' },
+    { menu_name: 'Cakes', menu_image: 'assets/menu_2.png' },
+    { menu_name: 'Toys', menu_image: 'assets/menu_4.png' },
+    { menu_name: 'Personalized', menu_image: 'assets/menu_5.png' },
+    { menu_name: 'Jewelry', menu_image: 'assets/menu_7.png' },
     { menu_name: 'Gift Hampers', menu_image: 'assets/menu_6.png' },
-    { menu_name: 'Greeting Cards', menu_image: 'assets/menu_7.png' },
-    { menu_name: 'Luxury Gifts', menu_image: 'assets/menu_8.png' }
+    { menu_name: 'Plants', menu_image: 'assets/menu_8.png' }
   ];
 
   setCategory(menuName: string) {
