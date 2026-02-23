@@ -10,8 +10,8 @@
     <a href="#explore-menu" (click)="setMenu('menu')" [class.active]="menu === 'menu'">
       Menu
     </a>
-    <a href="#footer" (click)="setMenu('contact-us')" [class.active]="menu === 'contact-us'">
-      Contact Us
+    <a routerLink="/contact" (click)="setMenu('contact')" [class.active]="menu === 'contact'">
+      Contact
     </a>
   </ul>
 
