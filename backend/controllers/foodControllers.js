@@ -53,4 +53,26 @@ const removeGift = async (req, res) => {
   }
 };
 
-export { addGift, listGift, removeGift };
+//update gift item
+const updateGift = async (req, res) => {
+  try {
+    const { id, name, description, price, category } = req.body;
+    const updateData = { name, description, price, category };
+    
+    if (req.file) {
+      const gift = await giftModel.findById(id);
+      if (gift && gift.image) {
+        fs.unlink(`uploads/${gift.image}`, () => {});
+      }
+      updateData.image = req.file.filename;
+    }
+    
+    await giftModel.findByIdAndUpdate(id, updateData);
+    res.json({ success: true, message: "Gift Updated" });
+  } catch (error) {
+    console.log(error);
+    res.json({ success: false, message: "Error" });
+  }
+};
+
+export { addGift, listGift, removeGift, updateGift };
