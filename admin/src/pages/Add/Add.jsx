@@ -82,7 +82,7 @@ const Add = ({url}) => {
                             <option value="Personalized">Personalized</option>
                             <option value="Jewelry">Jewelry</option>
                             <option value="Gift Hampers">Gift Hampers</option>
-                            <option value="Plants">Plants</option>
+                            <option value="Greeting Cards">Greeting Cards</option>
                         </select>
                     </div>
                     <div className="add-price flex-col">

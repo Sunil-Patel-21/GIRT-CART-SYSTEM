@@ -18,7 +18,7 @@ export class ExploreMenuComponent {
     { menu_name: 'Personalized', menu_image: 'assets/menu_5.png' },
     { menu_name: 'Jewelry', menu_image: 'assets/menu_7.png' },
     { menu_name: 'Gift Hampers', menu_image: 'assets/menu_6.png' },
-    { menu_name: 'Plants', menu_image: 'assets/menu_8.png' }
+    { menu_name: 'Greeting Cards', menu_image: 'assets/menu_8.png' }
   ];
 
   setCategory(menuName: string) {
