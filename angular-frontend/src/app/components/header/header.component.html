@@ -1,15 +1,25 @@
 <div class="header">
-  <video class="header-video" muted  loop>
-    <source src="assets/video1.mp4" type="video/mp4" />
-  </video>
+  <div class="slider">
+    <div class="slide" *ngFor="let slide of slides; let i = index" 
+         [class.active]="i === currentSlide"
+         [style.background-image]="'url(' + slide.image + ')'">
+      <div class="slide-overlay"></div>
+    </div>
+  </div>
+
+  <button class="slider-btn prev" (click)="prevSlide()">❮</button>
+  <button class="slider-btn next" (click)="nextSlide()">❯</button>
 
   <div class="header-contents">
-    <h2>Order your favourite gifts here</h2>
-    <p>
-      Choose from a diverse menu featuring an array of gifts crafted with
-      the finest quality. Our mission is to satisfy your gifting needs and
-      elevate your celebration experience.
-    </p>
+    <h2>{{ slides[currentSlide].title }}</h2>
+    <p>{{ slides[currentSlide].description }}</p>
     <button>View Menu</button>
+  </div>
+
+  <div class="slider-dots">
+    <span *ngFor="let slide of slides; let i = index" 
+          class="dot" 
+          [class.active]="i === currentSlide"
+          (click)="goToSlide(i)"></span>
   </div>
 </div>
