@@ -40,7 +40,11 @@
         </div>
         <hr />
       </div>
-      <button (click)="placeOrder($event)">PLACE ORDER</button>
+      <button (click)="placeOrder($event)" [disabled]="isLoading">
+        <span *ngIf="isLoading" class="loader"></span>
+        <span *ngIf="!isLoading">🎁 PLACE ORDER</span>
+        <span *ngIf="isLoading">Processing Order & Sending Email...</span>
+      </button>
     </div>
   </div>
 </div>

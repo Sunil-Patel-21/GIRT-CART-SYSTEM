@@ -53,7 +53,11 @@
           <textarea [(ngModel)]="formData.message" name="message" rows="5" placeholder="Your message here..." required></textarea>
         </div>
 
-        <button type="submit" class="submit-btn">Send Message</button>
+        <button type="submit" class="submit-btn" [disabled]="isLoading">
+          <span *ngIf="isLoading" class="loader"></span>
+          <span *ngIf="!isLoading">📧 Send Message</span>
+          <span *ngIf="isLoading">Sending...</span>
+        </button>
       </form>
     </div>
   </div>

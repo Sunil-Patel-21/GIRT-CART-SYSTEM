@@ -20,6 +20,8 @@ export class PlaceOrderComponent {
     country: '',
     phone: ''
   };
+  
+  isLoading = false;
 
   constructor(private storeService: StoreService, private router: Router, private toastr: ToastrService) {}
 
@@ -29,6 +31,8 @@ export class PlaceOrderComponent {
 
   async placeOrder(event: Event) {
     event.preventDefault();
+    
+    if (this.isLoading) return;
     
     // Validate form fields
     if (!this.data.firstName || !this.data.lastName || !this.data.email || 
@@ -67,6 +71,8 @@ export class PlaceOrderComponent {
       amount: this.getTotalCartAmount() + 40
     };
 
+    this.isLoading = true;
+    
     try {
       const response = await fetch(`${this.storeService.getUrl()}/api/order/place`, {
         method: 'POST',
@@ -77,14 +83,18 @@ export class PlaceOrderComponent {
         body: JSON.stringify(orderData)
       });
       const result = await response.json();
+      
+      this.isLoading = false;
+      
       if (result.success) {
         await this.storeService.loadCartFromBackend();
-        this.toastr.success('Order placed successfully!', 'Success');
+        this.toastr.success('Order placed successfully! Confirmation email sent.', 'Success');
         this.router.navigate(['/myorders']);
       } else {
         this.toastr.error('Error placing order', 'Error');
       }
     } catch (error) {
+      this.isLoading = false;
       console.error('Error:', error);
       this.toastr.error('Error placing order', 'Error');
     }
