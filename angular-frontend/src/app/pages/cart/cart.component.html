@@ -1,12 +1,12 @@
 <div class="cart">
   <div class="cart-items">
     <div class="cart-items-title">
-      <p class="white">Items</p>
-      <p class="white">Title</p>
-      <p class="white">Price</p>
-      <p class="white">Quantity</p>
-      <p class="white">Total</p>
-      <p class="white">Remove</p>
+      <p>Items</p>
+      <p>Title</p>
+      <p>Price</p>
+      <p>Quantity</p>
+      <p>Total</p>
+      <p>Remove</p>
     </div>
     <br />
     <hr />
@@ -15,10 +15,10 @@
       <div *ngIf="cartItems[item._id] > 0">
         <div class="cart-items-title cart-items-item">
           <img [src]="url + '/images/' + item.image" alt="" />
-          <p class="white">{{item.name}}</p>
-          <p class="white">Rs.{{item.price}}</p>
-          <p class="white">{{cartItems[item._id]}}</p>
-          <p class="white">Rs.{{item.price * cartItems[item._id]}}</p>
+          <p>{{item.name}}</p>
+          <p>Rs.{{item.price}}</p>
+          <p>{{cartItems[item._id]}}</p>
+          <p>Rs.{{item.price * cartItems[item._id]}}</p>
           <p (click)="removeFromCart(item._id)" class="cross">❌</p>
         </div>
         <hr />
@@ -28,21 +28,21 @@
 
   <div class="cart-bottom">
     <div class="cart-total">
-      <h2 class="white">Cart Total</h2>
+      <h2>Cart Total</h2>
       <div>
         <div class="cart-total-detail">
-          <p class="white">Subtotal</p>
-          <p class="white">Rs.{{getTotalCartAmount()}}</p>
+          <p>Subtotal</p>
+          <p>Rs.{{getTotalCartAmount()}}</p>
         </div>
         <hr />
         <div class="cart-total-detail">
-          <p class="white">Delivery Fee</p>
-          <p class="white">Rs.{{getTotalCartAmount() === 0 ? 0 : 40}}</p>
+          <p>Delivery Fee</p>
+          <p>Rs.{{getTotalCartAmount() === 0 ? 0 : 40}}</p>
         </div>
         <hr />
         <div class="cart-total-detail">
-          <b class="white">Total</b>
-          <b class="white">Rs.{{getTotalCartAmount() === 0 ? 0 : getTotalCartAmount() + 40}}</b>
+          <b>Total</b>
+          <b>Rs.{{getTotalCartAmount() === 0 ? 0 : getTotalCartAmount() + 40}}</b>
         </div>
         <hr />
       </div>

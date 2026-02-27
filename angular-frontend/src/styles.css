@@ -67,6 +67,11 @@ body.light-theme .cart-items-item p {
   color: #000000 !important;
 }
 
+body.light-theme .cart-items-item .cross {
+  filter: brightness(0);
+  color:red;
+}
+
 body.light-theme .cart hr {
   background: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.2), transparent);
 }
