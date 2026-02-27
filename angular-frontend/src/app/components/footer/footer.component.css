@@ -9,6 +9,16 @@
     padding-top:80px;
     margin-top: 100px;
 }
+
+.footer-logo-text {
+    font-size: 32px;
+    font-weight: 700;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 10px;
+}
 .footer-content{
     width:100%;
     display: grid;
