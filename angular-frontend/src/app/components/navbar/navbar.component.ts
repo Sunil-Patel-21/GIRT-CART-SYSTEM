@@ -52,6 +52,12 @@ export class NavbarComponent {
 
   onSearch() {
     this.storeService.setSearchQuery(this.searchQuery);
+    setTimeout(() => {
+      const element = document.getElementById('gift-display');
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 100);
   }
 
   onSearchEnter() {
