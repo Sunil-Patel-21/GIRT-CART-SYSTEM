@@ -200,6 +200,25 @@ body.light-theme .header-contents p {
   color: white;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
 }
+
+/* Contact Page Light Theme */
+body.light-theme .contact-form-container,
+body.light-theme .info-card {
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid #ddd;
+}
+
+body.light-theme .form-group input,
+body.light-theme .form-group textarea {
+  background: white;
+  border: 1px solid #000000;
+  color: #000000;
+}
+
+body.light-theme .form-group input::placeholder,
+body.light-theme .form-group textarea::placeholder {
+  color: #000000;
+}
 a {
   text-decoration: none;
   color: inherit;

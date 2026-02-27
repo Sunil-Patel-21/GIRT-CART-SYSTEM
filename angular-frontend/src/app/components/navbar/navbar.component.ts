@@ -61,4 +61,13 @@ export class NavbarComponent {
       element.scrollIntoView({ behavior: 'smooth' });
     }
   }
+
+  scrollToMenu() {
+    setTimeout(() => {
+      const element = document.getElementById('explore-menu');
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 100);
+  }
 }

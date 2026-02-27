@@ -7,7 +7,7 @@
     <a routerLink="/" (click)="setMenu('home')" [class.active]="menu === 'home'">
       Home
     </a>
-    <a href="#explore-menu" (click)="setMenu('menu')" [class.active]="menu === 'menu'">
+    <a href="#explore-menu" (click)="setMenu('menu'); scrollToMenu()" [class.active]="menu === 'menu'">
       Menu
     </a>
     <a routerLink="/contact" (click)="setMenu('contact')" [class.active]="menu === 'contact'">
