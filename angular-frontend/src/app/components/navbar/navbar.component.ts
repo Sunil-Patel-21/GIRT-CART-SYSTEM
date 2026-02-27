@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { StoreService } from '../../services/store.service';
+import { ThemeService } from '../../services/theme.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -13,12 +14,22 @@ export class NavbarComponent {
   token = '';
   totalAmount = 0;
   searchQuery = '';
+  isDark = true;
 
-  constructor(private storeService: StoreService, private router: Router) {
+  constructor(
+    private storeService: StoreService, 
+    private themeService: ThemeService,
+    private router: Router
+  ) {
     this.storeService.token$.subscribe(token => this.token = token);
     this.storeService.cartItems$.subscribe(() => {
       this.totalAmount = this.storeService.getTotalCartAmount();
     });
+    this.themeService.isDark$.subscribe(isDark => this.isDark = isDark);
+  }
+
+  toggleTheme() {
+    this.themeService.toggleTheme();
   }
 
   setMenu(menuItem: string) {

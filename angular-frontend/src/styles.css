@@ -11,6 +11,189 @@
 body {
   min-height: 100vh;
   background-color: black;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Light Theme */
+body.light-theme {
+  background-color: #FFE4E1;
+}
+
+body.light-theme * {
+  color: #000000;
+}
+
+body.light-theme .app {
+  background-color: #FFE4E1;
+}
+
+/* Navbar Light Theme */
+body.light-theme .navbar-menu a {
+  color: #000000;
+}
+
+body.light-theme .navbar button {
+  background: #333;
+  color: white;
+}
+
+body.light-theme .navbar button:hover {
+  background-color: #555;
+}
+
+body.light-theme .search-input {
+  color: #000000;
+}
+
+/* Footer Light Theme */
+body.light-theme .footer {
+  background-color: #e0e0e0;
+  color: #262626;
+}
+
+body.light-theme .footer * {
+  color: #262626;
+}
+
+/* Cart Light Theme */
+body.light-theme .cart-items {
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid #ddd;
+}
+
+body.light-theme .cart-items-title,
+body.light-theme .cart-items-item,
+body.light-theme .cart-items-item p {
+  color: #000000 !important;
+}
+
+body.light-theme .cart hr {
+  background: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.2), transparent);
+}
+
+body.light-theme .cart-total {
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid #ddd;
+}
+
+body.light-theme .cart-total h2,
+body.light-theme .cart-total-detail p,
+body.light-theme .cart-total-detail b {
+  color: #000000 !important;
+}
+
+/* Place Order Light Theme */
+body.light-theme .place-order-left {
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid #ddd;
+}
+
+body.light-theme .place-order-left .title {
+  color: #000000;
+}
+
+body.light-theme .place-order-left input {
+  background: white;
+  border: 1px solid #000000;
+  color: #000000;
+}
+
+body.light-theme .place-order-left input::placeholder {
+  color: #000000 !important;
+}
+
+body.light-theme .place-order-right .cart-total {
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid #ddd;
+}
+
+/* My Orders Light Theme */
+body.light-theme .my-orders h2 {
+  color: #000000;
+}
+
+body.light-theme .order-card {
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid #ddd;
+}
+
+body.light-theme .order-info p,
+body.light-theme .order-id,
+body.light-theme .order-date,
+body.light-theme .item-name,
+body.light-theme .item-quantity,
+body.light-theme .item-price,
+body.light-theme .delivery-address p {
+  color: #000000 !important;
+}
+
+body.light-theme .order-item {
+  background: rgba(0, 0, 0, 0.03);
+}
+
+body.light-theme .no-orders {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+body.light-theme .no-orders p {
+  color: #333;
+}
+
+/* Gift Detail Light Theme */
+body.light-theme .gift-detail-container {
+  background-color: white;
+  color: #262626;
+}
+
+body.light-theme .gift-detail-info * {
+  color: #262626;
+}
+
+body.light-theme .gift-detail-info .description {
+  color: #666;
+}
+
+body.light-theme .quantity-controls input {
+  background-color: #f5f5f5;
+  border-color: #ddd;
+  color: #262626;
+}
+
+/* Explore Menu Light Theme */
+body.light-theme .explore-menu h1 {
+  color: #000000;
+}
+
+body.light-theme .explore-menu-text {
+  color: #666;
+}
+
+body.light-theme .explore-menu-list-item p {
+  color: #333;
+}
+
+/* Gift Item Light Theme */
+body.light-theme .gift-item {
+  background: white;
+  border: 2px solid #ddd;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+body.light-theme .gift-item-name-rating p,
+body.light-theme .gift-item-desc {
+  color: #000000;
+}
+
+/* Login Popup - Already has white background */
+body.light-theme .login-popup-container {
+  background-color: white;
+}
+
+/* Header Light Theme */
+body.light-theme .header-contents h2,
+body.light-theme .header-contents p {
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
 }
 a {
   text-decoration: none;

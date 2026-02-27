@@ -1,8 +1,8 @@
 <div class="my-orders">
-  <h2 class="white">My Orders</h2>
+  <h2>My Orders</h2>
   <div class="container">
     <div *ngIf="orders.length === 0" class="no-orders">
-      <p class="white">No orders yet. Start shopping!</p>
+      <p>No orders yet. Start shopping!</p>
     </div>
     <div *ngFor="let order of orders" class="order-card">
       <div class="order-header">
@@ -26,14 +26,14 @@
       </div>
       <div class="order-footer">
         <div class="delivery-address">
-          <p class="white"><strong>Delivery Address:</strong></p>
-          <p class="white">{{order.address.firstName}} {{order.address.lastName}}</p>
-          <p class="white">{{order.address.street}}, {{order.address.city}}</p>
-          <p class="white">{{order.address.state}} - {{order.address.zipcode}}</p>
-          <p class="white">Phone: {{order.address.phone}}</p>
+          <p><strong>Delivery Address:</strong></p>
+          <p>{{order.address.firstName}} {{order.address.lastName}}</p>
+          <p>{{order.address.street}}, {{order.address.city}}</p>
+          <p>{{order.address.state}} - {{order.address.zipcode}}</p>
+          <p>Phone: {{order.address.phone}}</p>
         </div>
         <div class="order-total">
-          <p class="white"><strong>Total Amount:</strong></p>
+          <p><strong>Total Amount:</strong></p>
           <p class="amount">Rs.{{order.amount}}</p>
         </div>
       </div>

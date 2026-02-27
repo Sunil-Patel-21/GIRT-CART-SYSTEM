@@ -16,6 +16,10 @@
   </ul>
 
   <div class="navbar-right">
+    <button class="theme-toggle" (click)="toggleTheme()" title="Toggle Theme">
+      {{ isDark ? '☀️' : '🌙' }}
+    </button>
+
     <div class="navbar-search">
       <img src="assets/search_icon.png" alt="" />
       <input 

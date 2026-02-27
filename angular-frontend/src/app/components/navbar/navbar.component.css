@@ -26,6 +26,26 @@ p {
   gap: 40px;
 }
 
+.theme-toggle {
+  background: white;
+  font-size: 24px;
+  padding: 8px 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+  border: 2px solid #ddd;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.theme-toggle:hover {
+  background-color: #fff4f2;
+  transform: scale(1.1);
+}
+
 .navbar-search {
   display: flex;
   align-items: center;

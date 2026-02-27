@@ -10,11 +10,6 @@
 .my-orders h2 {
   font-size: 32px;
   margin-bottom: 30px;
-  color: white;
-}
-
-.white {
-  color: white;
 }
 
 .no-orders {
@@ -27,7 +22,6 @@
 
 .no-orders p {
   font-size: 18px;
-  color: #ddd;
 }
 
 .order-card {
@@ -56,19 +50,16 @@
 }
 
 .order-info p {
-  color: white;
   margin: 5px 0;
 }
 
 .order-id {
   font-size: 14px;
   font-weight: 600;
-  color: #ddd !important;
 }
 
 .order-date {
   font-size: 12px;
-  color: #aaa !important;
 }
 
 .order-status {
@@ -121,7 +112,6 @@
 }
 
 .item-name {
-  color: white;
   font-weight: 600;
   font-size: 16px;
   margin-bottom: 5px;
@@ -129,7 +119,6 @@
 
 .item-quantity,
 .item-price {
-  color: #ddd;
   font-size: 14px;
   margin: 3px 0;
 }
